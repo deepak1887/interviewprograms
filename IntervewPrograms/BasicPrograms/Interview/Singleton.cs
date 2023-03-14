@@ -6,15 +6,12 @@ public sealed class Singleton
     {
         Console.WriteLine("Singleton constructor created");
     }
-    private static Singleton instance = null;
+    private static Singleton? instance = null;
     public static Singleton GetInstance()
     {
         lock (obj)
         {
-            if (instance == null)
-            {
-                instance = new Singleton();
-            }
+            instance ??= new Singleton();
         }
 
         return instance;

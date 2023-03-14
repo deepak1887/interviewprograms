@@ -2,22 +2,20 @@
 {
     public class Child : Parent
     {
-        //public Child() 
-        //{
-        //    Console.WriteLine("childs's default constructor");
-        //}
-        //public Child(): base("deepak")
-        //{
-        //    Console.WriteLine("childs's public constructor");
-        //}
+        #region constructor
+        public Child(string str): base(str)
+        {
+            Console.WriteLine("childs's default constructor");
+        }
         //private Child()
         //{
-        //    Console.WriteLine("parent's private constructor");
+        //    Console.WriteLine("child's private constructor");
         //}
-        //static Child()
-        //{
-        //    Console.WriteLine("child's static constructor");
-        //}
+        static Child()
+        {
+            Console.WriteLine("child's static constructor");
+        }
+        #endregion
         public new void Sum()
         {
             Console.WriteLine("child's sum");
@@ -27,7 +25,7 @@
             Console.WriteLine("child's VirtualMethod");
         }
 
-        new public void ExtraMethod()
+        public new void ExtraMethod()
         {
             Console.WriteLine("child's ExtraMethod");
         }

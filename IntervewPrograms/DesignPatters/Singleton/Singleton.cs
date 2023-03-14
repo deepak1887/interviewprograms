@@ -22,7 +22,7 @@ public sealed class SingletonTS
 {
     public int instanceNumber = 0;
     private static volatile SingletonTS? instance;
-    private static object lockObject = new Object();
+    private static object lockObject = new();
     private SingletonTS()
     {
         instanceNumber++;

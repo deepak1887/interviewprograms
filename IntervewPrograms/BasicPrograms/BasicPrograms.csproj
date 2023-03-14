@@ -8,7 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\SolidPrinciples\SolidPrinciples.csproj" />
+    <Folder Include="Basics\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Problems\Problems.csproj" />
   </ItemGroup>
 
 </Project>

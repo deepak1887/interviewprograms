@@ -2,22 +2,25 @@
 {
     public class Parent
     {
-        //public Parent()
-        //{
-        //    Console.WriteLine("parent's public constructor");
-        //}
+        #region constructor
+        public Parent()
+        {
+            Console.WriteLine("parent's public constructor");
+        }
         //private Parent()
         //{
         //    Console.WriteLine("parent's private constructor");
         //}
-        //public Parent( string value)
-        //{
-        //    Console.WriteLine("parent's parameterised constructor with value "+ value);
-        //}
-        //static Parent()
-        //{
-        //    Console.WriteLine("parent's static constructor");
-        //}
+        public Parent(string value)
+        {
+            Console.WriteLine("parent's parameterised constructor with value " + value);
+        }
+        static Parent()
+        {
+            Console.WriteLine("parent's static constructor");
+        }
+        #endregion
+
         public void Sum()
         {
             Console.WriteLine("parent's sum");

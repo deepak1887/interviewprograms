@@ -16,11 +16,11 @@ public class StringOperation
         string input = Console.ReadLine() ?? string.Empty;
         if (input == string.Join(" ", input.Split(' ').Select(x => new string(x.Reverse().ToArray()))))
         {
-            Console.WriteLine("string is palindrome");
+            Console.WriteLine($"{input} is palindrome");
         }
         else
         {
-            Console.WriteLine("string is not palindrome");
+            Console.WriteLine($"{input} is not palindrome");
         }
         Console.ReadKey();
     }
@@ -46,8 +46,40 @@ public class StringOperation
                 temp = "";
             }
         }
-
-
         return listString;
+    }
+}
+
+public class StringOperationDemo
+{
+    public static void Run()
+    {
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("Welecome to string problems.\nSelect options from below");
+            Console.WriteLine("1. Reverse of string");
+            Console.WriteLine("2. Check palindrome");
+            //Console.WriteLine("3. Print Right Pyramid");
+            //Console.WriteLine("4. Print Inverted Pyramid");
+            Console.WriteLine("5. Exit");
+            int i = Convert.ToInt32(Console.ReadLine());
+            switch (i)
+            {
+                case 1:
+                    StringOperation.RevString();
+                    break;
+                case 2:
+                    StringOperation.CheckPlindrome();
+                    break;
+                case 5:
+                default:
+                    break;
+            }
+            if (i == 5)
+            {
+                break;
+            }
+        }
     }
 }

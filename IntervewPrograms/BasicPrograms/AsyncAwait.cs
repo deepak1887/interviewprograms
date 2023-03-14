@@ -12,7 +12,7 @@ public class AsyncAwait
     public async void DocumentLength()
     {
         Console.WriteLine("File Read Started");
-        Task<int> task = new Task<int>(ReadFile);
+        var task = new Task<int>(ReadFile);
         task.Start();
         Console.WriteLine("Processing......");
         int count = await task.ConfigureAwait(true);

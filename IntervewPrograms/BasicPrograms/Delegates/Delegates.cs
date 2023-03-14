@@ -1,4 +1,4 @@
-﻿namespace BasicPrograms;
+﻿namespace BasicPrograms.Delegates;
 //Defenation on MSDN
 //Delegates allow polymorphism by encapsulating a method that matches the delegate signature.
 //The method encapsulated by the delegate is decided at runtime.
