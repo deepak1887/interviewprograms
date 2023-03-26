@@ -21,6 +21,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AWSLambdaAnotation", "AWSLa
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Database", "Database", "{DCAD7676-3B45-4C9F-B731-7EAACD3AE67D}"
 	ProjectSection(SolutionItems) = preProject
+		indexes.sql = indexes.sql
 		SqlQuery_1.sql = SqlQuery_1.sql
 	EndProjectSection
 EndProject

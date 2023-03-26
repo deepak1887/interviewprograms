@@ -1,0 +1,26 @@
+<h1>Map Observables</h1>
+<div class="row">
+  <div class="col">
+    <div>
+      <button class="btn btn-primary" (click)="startObs1()">Start</button>
+      <button class="btn btn-primary ms-2" (click)="stopObs1()">Stop</button>
+    </div>
+    <table class='table table-striped' aria-labelledby="tableLabel">
+      <thead>
+        <tr>
+          <th>Observable 1</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="obs1Data.length > 0">
+        <tr *ngFor="let data of obs1Data; let i=index">
+          <td>{{ data }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+  <div class="col"></div>
+</div>

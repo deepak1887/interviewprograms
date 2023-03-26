@@ -3,6 +3,13 @@ public class StringOperation
 {
     public static void RevString()
     {
+        string? a = "";
+        string b = "";
+        if(a == b)
+        {
+
+        }
+
         Console.WriteLine("Enter string to reverse");
         string input = Console.ReadLine() ?? string.Empty;
         string[] inputArray = input.Split(' ');

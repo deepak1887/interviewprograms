@@ -1,6 +1,7 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BasicPrograms.Delegates;
 using BasicPrograms.Interfaces;
+using BasicPrograms.MultiThreading;
 using Problems;
 
 while (true)
@@ -11,6 +12,7 @@ while (true)
     Console.WriteLine("3. Numerical problems");
     Console.WriteLine("4. Pyramid problems");
     Console.WriteLine("5. String problems");
+    Console.WriteLine("6. Multi Threading");
     int i = Convert.ToInt32(Console.ReadLine());
 
     switch (i)
@@ -35,6 +37,10 @@ while (true)
             Console.WriteLine("\n");
             StringOperationDemo.Run();
             break;
+        case 6:
+            Console.WriteLine("\n");
+            MultiThreadingDemo.Run();
+            break;
         default:
             break;
     }
@@ -47,3 +53,8 @@ while (true)
     //}
 }
 //Console.ReadLine();
+
+class Bob
+{
+    public int number { get; set; }
+}
