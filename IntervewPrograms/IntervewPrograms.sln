@@ -37,9 +37,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.API", "Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.SharedKernel", "CleanArchitecture\CleanArchitecture.SharedKernel\CleanArchitecture.SharedKernel.csproj", "{6E5A7714-974E-4249-A05C-3EC05E15CE12}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.Angular", "CleanArchitecture\CleanArchitecture.Angular\CleanArchitecture.Angular.csproj", "{E1F58B97-9301-4356-9CDF-7B6987C6E029}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.Angular", "CleanArchitecture\CleanArchitecture.Angular\CleanArchitecture.Angular.csproj", "{E1F58B97-9301-4356-9CDF-7B6987C6E029}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CleanArchitecture.React", "CleanArchitecture\CleanArchitecture.React\CleanArchitecture.React.csproj", "{66120400-A76D-40B3-B77E-B84BE7727F02}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CleanArchitecture.React", "CleanArchitecture\CleanArchitecture.React\CleanArchitecture.React.csproj", "{66120400-A76D-40B3-B77E-B84BE7727F02}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Terraforms", "Terraforms", "{FBF72F3A-F3EA-4111-9E63-34AA97C73370}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -112,6 +114,7 @@ Global
 		{6E5A7714-974E-4249-A05C-3EC05E15CE12} = {A025AD75-A250-4CA8-A82E-FAA3FF5AB4B3}
 		{E1F58B97-9301-4356-9CDF-7B6987C6E029} = {A025AD75-A250-4CA8-A82E-FAA3FF5AB4B3}
 		{66120400-A76D-40B3-B77E-B84BE7727F02} = {A025AD75-A250-4CA8-A82E-FAA3FF5AB4B3}
+		{FBF72F3A-F3EA-4111-9E63-34AA97C73370} = {1D448C79-7342-4473-9E32-0784854495FC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {23AB8E02-146C-4B81-8C45-FFD0F3F44EDF}
