@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
 using BasicPrograms.Delegates;
+using BasicPrograms.HakerRank;
 using BasicPrograms.Interfaces;
 using BasicPrograms.MultiThreading;
 using Problems;
@@ -13,6 +14,7 @@ while (true)
     Console.WriteLine("4. Pyramid problems");
     Console.WriteLine("5. String problems");
     Console.WriteLine("6. Multi Threading");
+    Console.WriteLine("7. Haker Rank problems");
     int i = Convert.ToInt32(Console.ReadLine());
 
     switch (i)
@@ -40,6 +42,10 @@ while (true)
         case 6:
             Console.WriteLine("\n");
             MultiThreadingDemo.Run();
+            break;
+        case 7:
+            Console.WriteLine("\n");
+            HakerRankDemo.Run();
             break;
         default:
             break;

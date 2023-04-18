@@ -1,20 +1,59 @@
 ﻿namespace Problems;
 public class StringOperation
 {
-    public static void RevString()
+    private static List<string> StringParts(string s, int partSize)
+    {
+        return Enumerable.Range(0, partSize).Select(i => s.Substring(i*partSize, partSize)).ToList();
+    }
+    private static string ReverseString(string input, int start = 0, int end = 0)
+    {
+        char[] characters = input.ToCharArray();
+        int length = end == 0 ? characters.Length : end;
+        for (int i = start; i < length / 2; i++)
+        {
+            //char temp = characters[i];
+            //characters[i] = characters[length - 1 - i];
+            //characters[length - 1 - i] = temp;
+
+            (characters[length - 1 - i], characters[i]) = (characters[i], characters[length - 1 - i]);
+        }
+        return new string(characters);
+    }
+    private static string ReverseString(char[] characters, int start = 0, int end = 0)
+    {
+        int length = end == 0 ? characters.Length : end;
+        for (int i = start; i < length / 2; i++)
+        {
+            (characters[length - 1 - i], characters[i]) = (characters[i], characters[length - 1 - i]);
+        }
+        return new string(characters);
+    }
+
+    public static void ReverseStringWithSpaces()
     {
         Console.WriteLine("Enter string to reverse");
         string input = Console.ReadLine() ?? string.Empty;
         string[] inputArray = input.Split(' ');
-        string result = string.Join(" ", inputArray.Select(x => new string(x.Reverse().ToArray())));
+        string result = string.Join(" ", inputArray.Select(x => ReverseString(x)));
         Console.WriteLine(result);
         Console.ReadKey();
     }
+
+    public static void RevStringWithoutInbuilt()
+    {
+        Console.WriteLine("Enter string to reverse");
+        string input = Console.ReadLine() ?? string.Empty;
+        Console.WriteLine(ReverseString(input));
+        Console.ReadKey();
+    }
+
+    
+
     public static void CheckPlindrome()
     {
         Console.WriteLine("Enter string to check palindrom");
         string input = Console.ReadLine() ?? string.Empty;
-        if (input == string.Join(" ", input.Split(' ').Select(x => new string(x.Reverse().ToArray()))))
+        if (input == string.Join(" ", input.Split(' ').Select(x => ReverseString(x))))
         {
             Console.WriteLine($"{input} is palindrome");
         }
@@ -56,15 +95,6 @@ public class StringOperation
         Reverse(input.ToCharArray());
 
     }
-    private static void Rev(char[] s, int l, int r)
-    {
-        for (int i = l; i < r / 2; i++)
-        {
-            char temp = s[i];
-            s[i] = s[r - 1 - i];
-            s[r - 1 - i] = temp;
-        }
-    }
 
     public static void Reverse(char[] s)
     {
@@ -84,7 +114,8 @@ public class StringOperation
         }
 
         // reversing the character array
-        Rev(temp, 0, x);
+        //Rev(temp, 0, x);
+        ReverseString(temp, 0, x);
         x = 0;
         for (int i = 0; i < s.Length; i++)
         {
@@ -112,6 +143,7 @@ public class StringOperationDemo
             Console.WriteLine("Welecome to string problems.\nSelect options from below");
             Console.WriteLine("1. Reverse of string");
             Console.WriteLine("2. Check palindrome");
+            Console.WriteLine("3. Reverse string with special char maintain special char position");
             //Console.WriteLine("3. Print Right Pyramid");
             //Console.WriteLine("4. Print Inverted Pyramid");
             Console.WriteLine("5. Exit");
@@ -119,10 +151,13 @@ public class StringOperationDemo
             switch (i)
             {
                 case 1:
-                    StringOperation.RevString();
+                    StringOperation.RevStringWithoutInbuilt();
                     break;
                 case 2:
                     StringOperation.CheckPlindrome();
+                    break;
+                case 3:
+                    StringOperation.ReverseStringWithSpecialChar();
                     break;
                 case 5:
                 default:

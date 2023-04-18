@@ -105,3 +105,19 @@ var btnClick = function () {
 };
 
 //console.log(immediateFunction());
+
+//JavascriptClosure
+//statefull self invoking function
+var count = (function () {
+  let currentCount = 0;
+
+  var inc = function increment() {
+    return currentCount++;
+  };
+  return inc;
+})();
+
+var incrementClicked = function () {
+  var display = document.getElementById("closureValue");
+  display.value = count();
+};

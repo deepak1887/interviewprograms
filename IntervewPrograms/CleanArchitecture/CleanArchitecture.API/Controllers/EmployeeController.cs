@@ -15,6 +15,7 @@ public class EmployeeController : ControllerBase
     }
     [Route("[action]")]
     [HttpGet]
+
     [ProducesResponseType(typeof(IEnumerable<Employee>), (int)HttpStatusCode.OK)]
     public async Task<IActionResult> GetAllEmployees()
     {

@@ -46,4 +46,4 @@
 	1. Abstraction, Inheritance, Polymorphism, Encapsulation
 	2. Interfaces, Classes, Abstract classes
 
-	Rajeev Srivastava -- Natwest
+Rajeev Srivastava -- Natwest

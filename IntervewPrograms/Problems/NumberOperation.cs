@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace Problems;
+﻿namespace Problems;
 public class NumberOperation
 {
     public static void RevInteger()
@@ -106,6 +104,17 @@ public class NumberOperation
         PrintAllPrimeNumerInArray(numbers.ToArray());
     }
 
-
+    public static void PrintMaxElementFromArray(int[] inputs)
+    {
+        int max = inputs[0];
+        for (int i = 1; i < inputs.Length; i++)
+        {
+            if (inputs[i] > max)
+            {
+                max = inputs[i];
+            }
+        }
+        Console.WriteLine($"Max element is {max}");
+    }
 
 }

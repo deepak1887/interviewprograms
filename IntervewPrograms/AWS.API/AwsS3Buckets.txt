@@ -1,0 +1,75 @@
+﻿s3 storate classes:
+1. S3 Standard - Frequently accessed data (more than once a month) with millisecond access.
+2. S3 Standard-IA - Long-lived, infrequently accessed data (once a month) with millisecond access.
+3. S3 Intelligent-Tiering - Data with unknown, changing, or unpredictable access patterns
+4. S3 One Zone-IA - Recreatable, infrequently accessed data (once a month) with millisecond access
+5. S3 Glacier Instant Retrieval - Long-lived, archive data accessed once a quarter with millisecond access
+6. S3 Glacier Flexible Retrieval - Long-lived archive data accessed once a year with retrieval times of minutes to hours.
+7. S3 Glacier Deep Archive - Long-lived archive data accessed less than once a year with retrieval times of hours.
+8. RRS (not recommended) - Noncritical, frequently accessed data with millisecond access
+
+// Summary:
+//     S3 Glacier Deep Archive provides secure, durable object storage class for long
+//     term data archival. It is the ideal storage class to make an archival, durable
+//     copy of data that rarely, if ever, needs to be accessed. It can be used as an
+//     offline backup for their most important data assets and to meet long-term retention
+//     needs.
+public static readonly S3StorageClass DeepArchive = new S3StorageClass("DEEP_ARCHIVE");
+
+//
+// Summary:
+//     The GLACIER storage is for object that are stored in Amazon Glacier. This storage
+//     class is for objects that are for archival purpose and get operations are rare.
+//     Durability 99.999999999%
+public static readonly S3StorageClass Glacier = new S3StorageClass("GLACIER");
+
+//
+// Summary:
+//     Constant GLACIER_IR for ObjectStorageClass
+public static readonly S3StorageClass GlacierInstantRetrieval = new S3StorageClass("GLACIER_IR");
+
+//
+// Summary:
+//     IntelligentTiering makes it easy to lower your overall cost of storage by automatically
+//     placing data in the storage class that best matches the access patterns for the
+//     storage. With IntelligentTiering, you don’t need to define and manage individual
+//     policies for lifecycle data management or write code to transition objects between
+//     storage classes. Instead, you can use IntelligentTiering to manage transitions
+//     between Standard and S-IA without writing any application code. IntelligentTiering
+//     also manages transitions automatically to Glacier for long term archive in addition
+//     to S3 storage classes.
+public static readonly S3StorageClass IntelligentTiering = new S3StorageClass("INTELLIGENT_TIERING");
+
+//
+// Summary:
+//     The ONEZONE_IA storage is for infrequently accessed objects. It is similiar to
+//     STANDARD_IA, but only stores object data within one Availablity Zone in a given
+//     region.
+//     Durability 99.999999999%; Availability 99% over a given year.
+public static readonly S3StorageClass OneZoneInfrequentAccess = new S3StorageClass("ONEZONE_IA");
+
+//
+// Summary:
+//     The OUTPOSTS storage class for objects stored in a S3 Outpost
+public static readonly S3StorageClass Outposts = new S3StorageClass("OUTPOSTS");
+
+//
+// Summary:
+//     REDUCED_REDUNDANCY provides the same availability as standard, but at a lower
+//     durability.
+//     Durability 99.99%; Availability 99.99% over a given year.
+public static readonly S3StorageClass ReducedRedundancy = new S3StorageClass("REDUCED_REDUNDANCY");
+
+//
+// Summary:
+//     The STANDARD storage class, which is the default storage class for S3.
+//     Durability 99.999999999%; Availability 99.99% over a given year.
+public static readonly S3StorageClass Standard = new S3StorageClass("STANDARD");
+
+//
+// Summary:
+//     The STANDARD_IA storage is for infrequently accessed objects. This storage class
+//     is for objects that are long-lived and less frequently accessed, like backups
+//     and older data.
+//     Durability 99.999999999%; Availability 99.9% over a given year.
+public static readonly S3StorageClass StandardInfrequentAccess = new S3StorageClass("STANDARD_IA");
