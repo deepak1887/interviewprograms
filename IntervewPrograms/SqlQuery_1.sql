@@ -1,5 +1,5 @@
 ﻿USE [NORTHWND]
-SELECT * FROM EmployeeSample
+--SELECT * FROM EmployeeSample
 
 --nth highest salary
 
@@ -20,25 +20,25 @@ SELECT * FROM EmployeeSample
 --)
 --select * from supplierProduct where [Rank] = 1
 --Nth Highest salary
-SELECT ename,sal from Employee e1 where 
-        N-1 = (SELECT COUNT(DISTINCT sal)from Employee e2 where e2.sal > e1.sal) 
+--SELECT ename,sal from Employee e1 where 
+--        N-1 = (SELECT COUNT(DISTINCT sal)from Employee e2 where e2.sal > e1.sal) 
 
 --solution 2
-select Salary from EmployeeSample order by Salary desc offset 4 rows fetch next 1 rows only
+--select Salary from EmployeeSample order by Salary desc offset 4 rows fetch next 1 rows only
 
 --Hirarichel data
 
-Declare @Id Int;
-set @Id = 130;
-with EmployeeCTE AS (
-	select EmployeeId, FirstName, ManagerId from EmployeeSample where EmployeeId = @Id
-	UNION ALL
-	select EmployeeSample.EmployeeId, EmployeeSample.FirstName, EmployeeSample.ManagerId from EmployeeSample
-	JOIN EmployeeCTE ON
-	EmployeeSample.EmployeeId = EmployeeCTE.ManagerId
-)
-select E1.FirstName, E2.FirstName from EmployeeCTE E1
-LEFT JOIN EmployeeCTE E2 on E1.ManagerId = E2.EmployeeId
+--Declare @Id Int;
+--set @Id = 130;
+--with EmployeeCTE AS (
+--	select EmployeeId, FirstName, ManagerId from EmployeeSample where EmployeeId = @Id
+--	UNION ALL
+--	select EmployeeSample.EmployeeId, EmployeeSample.FirstName, EmployeeSample.ManagerId from EmployeeSample
+--	JOIN EmployeeCTE ON
+--	EmployeeSample.EmployeeId = EmployeeCTE.ManagerId
+--)
+--select E1.FirstName, E2.FirstName from EmployeeCTE E1
+--LEFT JOIN EmployeeCTE E2 on E1.ManagerId = E2.EmployeeId
 
 --JOIN
 --var result = entityFrameworkObjectContext.SomeClass
@@ -85,4 +85,3 @@ LEFT JOIN EmployeeCTE E2 on E1.ManagerId = E2.EmployeeId
 --Shane   3000    4 
 --Rick    3000    4 
 --Sid     1000    5
-

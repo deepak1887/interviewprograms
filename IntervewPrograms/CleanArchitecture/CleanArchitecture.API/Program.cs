@@ -1,3 +1,4 @@
+using CleanArchitecture.API.Filters;
 using CleanArchitecture.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -9,6 +10,15 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddInfrastructure(builder.Configuration);
+
+//Add Filters
+builder.Services.AddControllers(config =>
+{
+    config.Filters.Add(new AuthFilterAttribute());
+    config.Filters.Add(new ActionFilterAttribute());
+    config.Filters.Add(new ResultFilterAtribute());
+    config.Filters.Add(new ExceptionFilterAttribute());
+});
 
 //using(var scope = builder.Services)
 

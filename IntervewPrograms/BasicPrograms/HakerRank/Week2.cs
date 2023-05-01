@@ -1,19 +1,4 @@
-﻿using static BasicPrograms.AnanomusFuntions;
-using System.Collections.Generic;
-using System.Numerics;
-using System.Reflection.Emit;
-using System.Reflection.Metadata;
-using System.Security.Claims;
-using System.Text;
-using System;
-using BasicPrograms.Interfaces;
-using static System.Net.Mime.MediaTypeNames;
-using System.Data.Common;
-using System.Reflection;
-using System.IO;
-using System.Threading.Channels;
-
-namespace BasicPrograms.HakerRank;
+﻿namespace BasicPrograms.HakerRank;
 //Given an array of integers, where all elements but one occur twice, find the unique element.
 //Example
 // a = [1,2,3,4,3,2,1]
@@ -184,7 +169,7 @@ public class CountingValleys
     private static readonly string path = "DDUUDDUDUUUD";
     public static void Run()
     {
-        Console.WriteLine("Path : "+ path);
+        Console.WriteLine("Path : " + path);
         int level = 0, previous = 0, valleys = 0;
         for (int i = 0; i < path.Length; i++)
         {
@@ -196,7 +181,7 @@ public class CountingValleys
             {
                 level--;
             }
-            if(previous <level && level == 0)
+            if (previous < level && level == 0)
             {
                 valleys++;
             }
@@ -262,8 +247,8 @@ public class MarsExploration
     private static readonly string s = "SOSSPSSQSSOR";
     public static void Run()
     {
-        Console.WriteLine("Input string : "+ s);
-        var partsDiff = BreakString(s, 3).Select(s=> WordsDeviation("SOS", s));
+        Console.WriteLine("Input string : " + s);
+        var partsDiff = BreakString(s, 3).Select(s => WordsDeviation("SOS", s));
         Console.WriteLine("Deviation :" + partsDiff.Sum());
     }
 
@@ -299,7 +284,7 @@ public class FilipMatrix
     public static void Run()
     {
         Console.WriteLine("Input Matrix:");
-        foreach(var m in matrix)
+        foreach (var m in matrix)
         {
             Console.WriteLine(string.Join(",", m.ToArray()));
             FlipMatrix();
@@ -310,14 +295,14 @@ public class FilipMatrix
     {
         var n = matrix.Count / 2;
         var total = 0;
-        for(int row = 0; row < n; row++)
+        for (int row = 0; row < n; row++)
         {
-            for(int col = 0; col < n; col++)
+            for (int col = 0; col < n; col++)
             {
                 var leftTop = matrix[row][col];
-                var rightTop = matrix[row][2*n - col -1];
+                var rightTop = matrix[row][2 * n - col - 1];
                 var leftBottom = matrix[2 * n - row - 1][col];
-                var rightBottom = matrix[2*n - row - 1][2*n - col - 1];
+                var rightBottom = matrix[2 * n - row - 1][2 * n - col - 1];
                 var allElements = new int[] { leftTop, rightTop, leftBottom, rightBottom };
                 total += allElements.Max();
             }
