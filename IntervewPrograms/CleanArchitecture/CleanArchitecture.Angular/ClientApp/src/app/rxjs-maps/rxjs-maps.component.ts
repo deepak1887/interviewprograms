@@ -1,13 +1,13 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, ComponentFactory, OnInit, ViewChild, ViewContainerRef } from "@angular/core";
 import { concatMap, delay, exhaustMap, forkJoin, interval, map, mergeAll, mergeMap, Subscription, switchMap, take, timer } from "rxjs";
 import { Helpers } from "../Helpers/helpers";
+import { MessageComponent } from "../message/message.component";
 
 @Component({
   selector: 'rxjs-maps',
   templateUrl: './rxjs-maps.component.html'
 })
 export class RxjsMapsComponent implements OnInit {
-  
 
   private obs1 = interval(500).pipe(take(20)); //.5 *20 = 10
   private obs1Subscription = Subscription.EMPTY;
@@ -19,7 +19,7 @@ export class RxjsMapsComponent implements OnInit {
   private obs5 = interval(2500).pipe(take(5));
   private obs6 = interval(3000).pipe(take(5));
 
-
+  @ViewChild('vcr', { static: true, read: ViewContainerRef }) vcr!: ViewContainerRef;
   ngOnInit(): void {
     this.obs1Data = [];
   }
@@ -29,13 +29,21 @@ export class RxjsMapsComponent implements OnInit {
     //  console.log(x);
     //})
     this.obs1Subscription = Helpers.nums().pipe(map(x => Helpers.getNums(x)), mergeAll(2)).subscribe((x) => {
-      //this.obs1Data.push(x);
-      console.log(x);
+      this.obs1Data.push(x);
+      //console.log(x);
     })
   }
 
   public stopObs1() {
     this.obs1Subscription.unsubscribe();
+    
+  }
+
+  private createMessage(): void {
+    this.vcr.clear();
+    const messageComponent = this.vcr.createComponent(MessageComponent);
+    messageComponent.instance.message = "Stopping Observable !!";
+    //messageComponent
   }
 
 }
