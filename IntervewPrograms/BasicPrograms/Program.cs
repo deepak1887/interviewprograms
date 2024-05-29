@@ -62,5 +62,5 @@ while (true)
 
 class Bob
 {
-    public int number { get; set; }
+    public int Number { get; set; }
 }

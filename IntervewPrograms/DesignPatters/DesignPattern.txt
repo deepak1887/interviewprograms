@@ -1,11 +1,11 @@
 ﻿1. Design patterns(what and why)
 	a. Design pattern in object oriented programming world helps the developers to make a 
 	   better software design.
-	b. Design pattern provide solutions to real wold softeare application design problems 
+	b. Design pattern provide solutions to real world software application design problems 
 	   or in application development.
 	c. Design pattern are about applying reusable design and interactions of objects.
 	d. Design pattern provide flexible solutions to solve common design problem in real world.
-	e. writing the code with design patterns will make your applications more Reliable, Scalable
+	e. Writing the code with design patterns will make your applications more Reliable, Scalable
 	   and maintainable.
 	f. A pattern is a recurring solution to a problem in a context.
 2. Design Pattern History
@@ -28,7 +28,7 @@
 					5. Facade
 					6. Flyweight
 					7. Proxy
-	c. Behavioral (Object behaviour and responsibilities berween objects are very important,
+	c. Behavioral (Object behaviour and responsibilities between objects are very important,
 					concerned with algorithms)
 					1. Chain
 					2. Command

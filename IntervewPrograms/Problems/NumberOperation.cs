@@ -1,6 +1,18 @@
 ﻿namespace Problems;
 public class NumberOperation
 {
+    public static bool Armstrong(int number)
+    {
+        int temp, reverse = 0, reminder;
+        temp = number;
+        while (number > 0)
+        {
+            reminder = number % 10;
+            reverse += (reminder * reminder * reminder);
+            number = number / 10;
+        }
+        return temp == reverse;
+    }
     public static void RevInteger()
     {
         Console.WriteLine("Enter Number to reverse");
