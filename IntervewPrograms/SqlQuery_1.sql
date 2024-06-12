@@ -66,8 +66,10 @@
 
 --Row_Number() --Rank() --Dense_Rank() 
 --Row_Number() -It always generates a unique value for each row, even if they are the same and the ORDER BY clause cannot distinguish between them
+-- syntax = select *, row_number() over (order by Salary desc) as [Index] from EmployeeSample
 
 --Rank() - The rank() function will assign the same rank to the same values i.e. which are not distinguishable by ORDER BY
+--syntax = select *, rank() over (order by Id) as [Index] from Employees
 --name    salary  rank
 --Jackob  7000    1
 --Peter   5000    2
@@ -78,6 +80,8 @@
 
 --Dense_Rank() he dense_rank function is similar to the rank() window function i.e. same values will be assigned the same rank, 
 --but the next different value will have a rank which is just one more than the previous ran
+-- syntax = select *, dense_rank() over (order by Salary desc) as [Index] from EmployeeSample
+
 --name    salary dense_rank 
 --Jackob  7000    1 
 --Peter   5000    2 

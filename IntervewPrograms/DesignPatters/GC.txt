@@ -23,4 +23,6 @@ Generation 1 : If space occupied by some generation 0 objects that are not relea
 Generation 2 : If space occupied by some generation 1 objects that are not released in 
 				the next garbage collection run, then these objects get moved to generation 2. 
 				The objects in generation 2 are long lived such as static objects as they remain 
-				0in the heap memory for the whole process duration.
+				in the heap memory for the whole process duration.
+
+Actions are performed in Heap memory
