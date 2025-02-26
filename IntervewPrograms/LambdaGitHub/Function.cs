@@ -8,7 +8,7 @@ namespace LambdaGitHub;
 
 public class Function
 {
-    private static readonly string GitHubToken = "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";
+    private static readonly string GitHubToken = "";
     private static readonly string RepoOwner = "deepak1887";
     private static readonly string RepoName = "interviewprograms";
     
