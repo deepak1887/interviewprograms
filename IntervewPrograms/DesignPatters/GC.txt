@@ -1,4 +1,4 @@
-﻿1.Marking Phase: A list of all the live objects is created during the marking phase. 
+﻿.Marking Phase: A list of all the live objects is created during the marking phase. 
 				This is done by following the references from all the root objects. 
 				All of the objects that are not on the list of live objects are potentially 
 				deleted from the heap memory.

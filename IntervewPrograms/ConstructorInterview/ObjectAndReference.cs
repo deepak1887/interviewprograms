@@ -2,9 +2,10 @@
 {
     public class Sample
     {
-        public string Str { get; set; }
-        public void sampleMethod()
+        public string Str { get; set; } = string.Empty;
+        public override string ToString()
         {
+            return Str;
         }
     }
     public class ObjectAndReference
@@ -27,6 +28,12 @@
             x = "bill gates";
             Console.WriteLine(x);
         }
+
+        void ChangeObjectString(Sample s)
+        {
+            s.Str = "bill gates";
+            Console.WriteLine(s.Str);
+        }
         public void Run()
         {
             Print();
@@ -34,12 +41,19 @@
             ChangeString(str);
             Console.WriteLine(a);
             Console.WriteLine(str);
+            Console.WriteLine("Changing Non premitive data type");
+            ChangeObjectString(samp);
+            Console.WriteLine(samp.ToString());
+            Console.WriteLine(samp.Str);
         }
 
         void Print()
         {
             Console.WriteLine(a);
             Console.WriteLine(str);
+            Console.WriteLine("Non premitive data type");
+            Console.WriteLine(samp.ToString());
+            Console.WriteLine(samp.Str);
         }
     }
 }

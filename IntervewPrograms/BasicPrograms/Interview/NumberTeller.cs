@@ -1,9 +1,9 @@
 ﻿namespace BasicPrograms.Interview;
 public class NumberTeller
 {
-    private static readonly Dictionary<int, string> ones = new ()
+    private static readonly Dictionary<int, string> ones = new()
     {
-        { 0, "Zero" },
+        {0, "Zero" },
         {1, "One" },
         {2, "Two" },
         {3, "Three" },
@@ -15,7 +15,7 @@ public class NumberTeller
         {9, "Nine" }
     };
 
-    private static readonly Dictionary<int, string> oneOnes = new ()
+    private static readonly Dictionary<int, string> oneOnes = new()
     {
         {1, "Eleven" },
         {2, "Twelve" },
@@ -28,7 +28,7 @@ public class NumberTeller
         {9, "Nineteen" }
     };
 
-    private static readonly Dictionary<int, string> tens = new ()
+    private static readonly Dictionary<int, string> tens = new()
     {
         {2, "Twenty" },
         {3, "Thirty" },
