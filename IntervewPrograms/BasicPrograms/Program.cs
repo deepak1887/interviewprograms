@@ -47,6 +47,10 @@ while (true)
             Console.WriteLine("\n");
             HakerRankDemo.Run();
             break;
+        case 8:
+            Console.WriteLine("\n");
+            Uniques.Run();
+            break;
         default:
             break;
     }

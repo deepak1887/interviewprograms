@@ -10,26 +10,27 @@
     }
     public class ObjectAndReference
     {
-        Sample samp = new Sample()
+        private static Sample samp = new Sample()
         {
             Str = "Sunny",
         };
 
-        int a = 10;
-        string str = "sunny";
+        static int a = 10;
+        static string str = "sunny";
 
-        void ChangeInterger(int x)
+        private static void ChangeInterger(int x)
         {
             x = 200;
             Console.WriteLine(x);
         }
-        void ChangeString(string x)
+
+        private static void ChangeString(string x)
         {
             x = "bill gates";
             Console.WriteLine(x);
         }
 
-        void ChangeObjectString(Sample s)
+        private static void ChangeObjectString(Sample s)
         {
             s.Str = "bill gates";
             Console.WriteLine(s.Str);
@@ -47,7 +48,7 @@
             Console.WriteLine(samp.Str);
         }
 
-        void Print()
+        private static void Print()
         {
             Console.WriteLine(a);
             Console.WriteLine(str);

@@ -13,6 +13,7 @@ public class HakerRankDemo
             Console.WriteLine("5. Divisible Sum Pairs");
             Console.WriteLine("6. Sparse Arrays");
             Console.WriteLine("7. Lonely Integer");
+            Console.WriteLine("8. counting sort");
             Console.WriteLine("9. To go back");
             int i = Convert.ToInt32(Console.ReadLine());
             switch (i)
@@ -37,6 +38,9 @@ public class HakerRankDemo
                     break;
                 case 7:
                     LonelyInteger.Run();
+                    break;
+                case 8:
+                    CountingSort.Run(); ;
                     break;
                 default:
                     break;

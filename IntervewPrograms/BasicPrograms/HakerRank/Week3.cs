@@ -1,10 +1,8 @@
-﻿using System.Runtime.Intrinsics.X86;
-
-namespace BasicPrograms.HakerRank;
+﻿namespace BasicPrograms.HakerRank;
 public class PermutingTwoArrays
 {
-    private static int[] A = new int[] { 1, 2, 2, 1 };
-    private static int[] B = new int[] { 3, 3, 3, 4 };
+    private static int[] A = { 1, 2, 2, 1 };
+    private static int[] B = { 3, 3, 3, 4 };
     private static int k = 5;
     public static void Run()
     {
