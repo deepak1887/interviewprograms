@@ -1,4 +1,6 @@
-﻿namespace Problems;
+﻿using System.Text;
+
+namespace Problems;
 public class StringOperation
 {
     private static List<string> StringParts(string s, int partSize)
@@ -131,6 +133,39 @@ public class StringOperation
         string revStr = new string(s);
         Console.WriteLine("reversed string is: " + revStr);
     }
+
+    public static void IsAnagramString(string a, string b)
+    {
+        if (a.Length != b.Length) return;
+        int length = a.Length;
+        bool isAnagram = true;
+        var hashMap = new HashSet<char>();
+        for (int i = 0; i < length; i++)
+        {
+            hashMap.Add(a[i]);
+        }
+
+        for (int i = 0; i <length; i++)
+        {
+            if (!hashMap.Contains(b[i]))
+            {
+                isAnagram = false;
+                break;
+            }
+        }
+        var sb = new StringBuilder();
+        sb.Append($"{a}, {b} are ");
+        if (isAnagram)
+        {
+            sb.Append("Anagrams");
+        }
+        else
+        {
+            sb.Append(" not Anagrams");
+        }
+        Console.WriteLine(sb.ToString());
+        Console.ReadKey();
+    }
 }
 
 public class StringOperationDemo
@@ -144,6 +179,7 @@ public class StringOperationDemo
             Console.WriteLine("1. Reverse of string");
             Console.WriteLine("2. Check palindrome");
             Console.WriteLine("3. Reverse string with special char maintain special char position");
+            Console.WriteLine("4. Check Anagram");
             //Console.WriteLine("3. Print Right Pyramid");
             //Console.WriteLine("4. Print Inverted Pyramid");
             Console.WriteLine("5. Exit");
@@ -158,6 +194,9 @@ public class StringOperationDemo
                     break;
                 case 3:
                     StringOperation.ReverseStringWithSpecialChar();
+                    break;
+                case 4:
+                    StringOperation.IsAnagramString("cat", "tal");
                     break;
                 case 5:
                 default:
