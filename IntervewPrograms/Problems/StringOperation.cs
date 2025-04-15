@@ -166,6 +166,23 @@ public class StringOperation
         Console.WriteLine(sb.ToString());
         Console.ReadKey();
     }
+
+    public static void GetCharacterCount(string input)
+    {
+        char[] chars = { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' };
+        int[] counts = new int[26];
+        for (int i = 0; i < input.Length; i++)
+        {
+            if (input[i] == ' ')
+                continue;
+            counts[Array.IndexOf(chars, input[i])]++;
+        }
+        for (int i = 0; i < counts.Length; i++)
+        {
+            if (counts[i] > 0)
+                Console.WriteLine($"{chars[i]} - {counts[i]}");
+        }
+    }
 }
 
 public class StringOperationDemo
@@ -182,7 +199,8 @@ public class StringOperationDemo
             Console.WriteLine("4. Check Anagram");
             //Console.WriteLine("3. Print Right Pyramid");
             //Console.WriteLine("4. Print Inverted Pyramid");
-            Console.WriteLine("5. Exit");
+            Console.WriteLine("5. Print word count");
+            Console.WriteLine("10. Exit");
             int i = Convert.ToInt32(Console.ReadLine());
             switch (i)
             {
@@ -199,10 +217,13 @@ public class StringOperationDemo
                     StringOperation.IsAnagramString("cat", "tal");
                     break;
                 case 5:
+                    StringOperation.GetCharacterCount("hello world");
+                    break;
+                case 10:
                 default:
                     break;
             }
-            if (i == 5)
+            if (i == 10)
             {
                 break;
             }
