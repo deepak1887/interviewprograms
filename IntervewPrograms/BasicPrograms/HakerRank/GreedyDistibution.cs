@@ -1,7 +1,4 @@
-﻿using BasicPrograms.Interfaces;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
-namespace BasicPrograms.HakerRank;
+﻿namespace BasicPrograms.HakerRank;
 
 //"Have the function FoodDistribution(arr) read the array of numbers stored in arr which will represent the hunger level of different people ranging from 0 to 5 (0 meaning not hungry at all, 5 meaning very hungry). You will also have N sandwiches to give out which will range from 1 to 20. The format of the array will be [N, h1, h2, h3, ...] where N represents the number of sandwiches you have and the rest of the array will represent the hunger levels of different people. Your goal is to minimize the hunger difference between each pair of people in the array using the sandwiches you have available.
 
