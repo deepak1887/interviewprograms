@@ -15,6 +15,10 @@ while (true)
     Console.WriteLine("5. String problems");
     Console.WriteLine("6. Multi Threading");
     Console.WriteLine("7. Haker Rank problems");
+    Console.WriteLine("8. Unique problems");
+    Console.WriteLine("9. Async Await- all await separately");
+    Console.WriteLine("10. Async Await- when all await at same time");
+    Console.WriteLine("11. Async Await- when all run in separate thread");
     int i = Convert.ToInt32(Console.ReadLine());
 
     switch (i)
@@ -50,6 +54,22 @@ while (true)
         case 8:
             Console.WriteLine("\n");
             Uniques.Run();
+            break;
+        case 9:
+            Console.WriteLine("\n");
+            AsyncAwaitDemo.RunAsync().GetAwaiter();
+            break;
+        case 10:
+            Console.WriteLine("\n");
+            AsyncAwaitDemo.RunTplAsync().GetAwaiter();
+            break;
+        case 11:
+            Console.WriteLine("\n");
+            AsyncAwaitDemo.RunThreadsAsync();
+            break;
+        case 12:
+            Console.WriteLine("\n");
+            AsyncAwaitDemo.RunMultipleTaskAtATime().GetAwaiter();
             break;
         default:
             break;

@@ -2,10 +2,7 @@
 public class TriangleAdapter : IRectangle
 {
     readonly Triangle triangle;
-    public TriangleAdapter(Triangle t)
-    {
-        triangle = t;
-    }
+    public TriangleAdapter(Triangle t) => triangle = t;
     public void AboutRectangle()
     {
         triangle.AboutTriangle();
